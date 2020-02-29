@@ -1,0 +1,17 @@
+export const worter = [
+    ["Tisch", "der", "es", "e"],
+    ["Lampe", "die", "", "en"],
+    ["Kind", "das", "es", "er"],
+    ["Abbildung", "die", "", "en"],
+    ["Abenteuer", "das", "s", ""],
+    ["Abfall", "der", "s", "..e"],
+    ["Wochenende", "das", "s", "n"],
+    ["Prüfung", "die", "", "en"],
+    ["Grammatik", "die", "", "en"],
+    ["Brief", "der", "s", "e"],
+    ["Deutsch", "das", "s", null],
+    ["Niveau", "das", "s", "s"],
+    ["Stufe", "die", "", "n"],
+    ["Gefallen", "der", "s", ""],
+    ["Note", "die", "", "n"],
+];

@@ -1,26 +1,33 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Maskulina from './Maskulina';
+import {worter} from './worter';
+import {adjektive} from "./adjektive";
+import Feminina from "./Feminina";
+import Neutra from "./Neutra";
+import Plural from "./Plural";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    let wort = worter[worter.length-1];
+    let adjektiv = adjektive[0];
+
+    return (
+        <div className="App">
+            <h1>{wort[1]} {wort[0]}</h1>
+            {wort[1] === "der" &&
+                <Maskulina wort={wort[0]} adjektiv={adjektiv} deklination={wort[2]} />
+            }
+            {wort[1] === "die" &&
+                <Feminina wort={wort[0]} adjektiv={adjektiv} deklination={wort[2]} />
+            }
+            {wort[1] === "das" &&
+                <Neutra wort={wort[0]} adjektiv={adjektiv} deklination={wort[2]} />
+            }
+            {wort[3] != null &&
+                <Plural wort={wort[0]} adjektiv={adjektiv} deklination={wort[3]} />
+            }
+        </div>
+    );
 }
 
 export default App;
